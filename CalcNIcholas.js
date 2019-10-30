@@ -1,4 +1,4 @@
-function CalcArea(){
+function calcVolume(){
 
   l = length.value  // read weight from element with id="length"
 
@@ -6,9 +6,9 @@ function CalcArea(){
 
   w = width.value   // read width from element with id= "width"
 
-  volume = (l*w*h)  // calculate the volume of the cube
+  volume = (l*h*w)  // calculate the volume of the cube
 
-  volume.innerHTML =    // write into label element with id "BMI"
+  volume.innerHTML =    // write into label element with id "volume"
 
       "The volume of the cube is... "
 
