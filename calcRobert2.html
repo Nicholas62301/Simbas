@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title> demo1 </title>
+</head>
+<body>
+
+<h1>volume of a can</h1>
+What is your full name? <input type="text" id="fullName"><br>
+what is radius of can in inches <input type="number" id="radius"><br>
+what is height of can inches <input type="number" id="height"><br>
+<button class="btn btn-lg btn-danger" onClick="calcVolumes()">
+    Calculate volume of can
+</button>
+<br>
+<hr>
+<h2>Results</h2>
+<label id="Volume">????</label>
+
+<script>
+
+function calcVolumes(){
+  r = radius.value  // read weight from element with id="radius"
+  h = height.value  // read height from element with id="height"
+  volume = r*r*h*Math.PI  // calculate the Volume
+  Volume.innerHTML =    // write into label element with id "volume"
+      "Your Volume is "
+      +volume.toFixed(1)  // round BMI to 1 decimal place
+}
+</script>
+</body>
+</html>
