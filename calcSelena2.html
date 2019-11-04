@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+ <head>
+        <title> Calculator #2: The Area of a Right Triangle </title>
+ </head>
+<body>
+        <h1> The Area of a Right Triange </h1>
+        Do you like geometry ? <form action="" method="post">
+  <input type="checkbox" name="answer" value="no" /> Yes
+  <input type="checkbox" name="answer" value="yes" /> No
+  </form>
+        Enter base of can in inches <input type="number" id="base"><br>
+        Enter height of can in inches <input type="number" id="height"><br>
+        <button class="btn btn-lg btn-danger" onClick="calcAreas()">
+            Calculate Area of Right Triangle
+        </button>
+        <br>
+        <hr>
+        <h2>Results</h2>
+        <label id="Area">????</label>
+
+        <script>
+          function calcAreas(){
+            b = base.value  // read radius from element with id="base"
+            h = height.value  // read height from element with id="height"
+            area = b*h*1/2  // calculate the Area
+            console.log("hello world")
+            console.log(area)
+            if(b<1){
+              Area.innerHTML =    // write into label element with id "Area"
+                  "your base is less then 1, please enter a valid number"
+            }else{
+            Area.innerHTML =    // write into label element with id "Area"
+                "The area of the right triangle is "
+                +area.toFixed(1)  // round Area to 1 decimal place
+            }
+
+          }
+        </script>
+</body>
+
+</html>
