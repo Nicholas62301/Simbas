@@ -1,0 +1,26 @@
+<html>
+<head>
+  <title> demo1 </title>
+</head>
+<body>
+<h1> Your Pay</h1>
+your hours worked: <input type="text" id="timeTF"><br>
+your pay rate: <input type="text" id="rateTF"><br>
+<button onClick="calchoursworked()">
+  Calculate your hours worked
+</button>
+<br>
+<label id="resultLabel">
+  You worked????
+</label>
+
+<script>
+function calchoursworked(){
+  let hour = timeTF.value
+  let rate = rateTF.value
+  resultLabel.innerHTML =
+    "Your pay is "+hour*rate
+}
+</script>
+</body>
+</html>
