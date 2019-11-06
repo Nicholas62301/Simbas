@@ -4,6 +4,7 @@ Robert's first javascript canvas
  <head>
   <meta charset="utf-8"/>
   <script type="application/javascript">
+
     function draw() {
       var canvas = document.getElementById('canvas');
       if (canvas.getContext) {
@@ -23,8 +24,24 @@ Robert's first javascript canvas
         ctx.strokeRect(50, 50, 50, 50);
 
         ctx.fillRect(250,75,80,80)
+
+        ctx.beginPath();
+        ctx.fillstyle = 'rgba(0,0,0)'
+        ctx.arc(200,200,150,0,2*Math.Pi,true)
+        ctx.stroke()
+
+
+          drawCircle(ctx,250,150,50)
+          drawCircle(ctx,200,150,50)
+        }
       }
+
+    function drawCircle(ctx,x,y,r){
+      ctx.beginPath();
+      ctx.arc(x,y,r,0,2*Math.PI,true)
+      ctx.stroke()
     }
+
   </script>
  </head>
  <body onload="draw();">
