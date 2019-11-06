@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+    function draw() {
+      var canvas = document.getElementById('canvas');
+      if (canvas.getContext) {
+        var ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = 'rgb(290, 380, 210)';
+        ctx.fillRect(0, 0, 500, 500);
+
+        ctx.fillStyle = "brown"//'rgba(200, 0, 0)';
+        ctx.fillRect(110, 320, 100, 100);
+
+        ctx.fillStyle = "brown"//'rgba(200, 0, 0)';
+        ctx.fillRect(290, 320, 100, 100)
+
+        //ctx.fillRect(25, 25, 100, 100);
+        //ctx.clearRect(45, 45, 60, 60);
+        //ctx.strokeRect(50, 50, 50, 50);
+
+        ctx.fillRect(100, 300, 300, 20)
+
+        ctx.fillStyle = 'yellow'//rgba(255,255, 0)';
+        ctx.fillRect(70, 70, 20, 50)
+
+        ctx.fillStyle = "yellow"//'rgba(200, 0, 0)';
+        ctx.fillRect(70, 180, 20, 50)
+
+        ctx.fillStyle = "yellow"//'rgba(200, 0, 0)';
+        ctx.fillRect(5, 140, 50, 20)
+
+        ctx.fillStyle = "yellow"//'rgba(200, 0, 0)';
+        ctx.fillRect(110, 140, 50, 20)
+
+        // put a 20 by 20 square in the middle
+        // write the code for a Capital T
+
+        ctx.beginPath();
+        ctx.fillStyle = "yellow"//'rgba(0,0,0)';
+        ctx.arc(80, 150, 50, 0, 2*Math.PI,true)
+        ctx.fill()
+      }
+    }
+  </script>
+ </head>
+ <body onload="draw();">
+   <h1> Selena's first Javascript Canvas! </h1>
+   Demo1 <br>
+   <canvas id="canvas" width="500" height="500"></canvas>
+ </body>
+</html>
