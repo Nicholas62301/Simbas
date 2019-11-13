@@ -45,10 +45,38 @@
     ctx.fill()
   }
 
+  function drawSelena(){
+    console.log("drawing Selena stuff")
+    ctx.strokeStyle="rgb(255,255,0)"
+    ctx.lineWidth=8
+    ctx.beginPath()
+    ctx.moveTo(300,141)
+    ctx.lineTo(290,123)
+    ctx.lineTo(268,104)
+    ctx.lineTo(247,102)
+    ctx.lineTo(227,111)
+    ctx.lineTo(214,132)
+    ctx.lineTo(226,153)
+    ctx.lineTo(248,167)
+    ctx.lineTo(266,172)
+    ctx.lineTo(289,179)
+    ctx.lineTo(300,187)
+    ctx.lineTo(300,200)
+    ctx.lineTo(293,215)
+    ctx.lineTo(284,224)
+    ctx.lineTo(264,232)
+    ctx.lineTo(246,229)
+    ctx.lineTo(228,222)
+    ctx.lineTo(219,210)
+    ctx.lineTo(208,202)
+    ctx.lineTo(203,188)
+    ctx.stroke()
+  }
+
   </script>
  </head>
  <body onload="init();">
-   <h1>drawTim interactive javascript canvas for 11/13</h1>
+   <h1>drawSelena Interactive Javascript Canvas for 11/13</h1>
    <br>
 
    <button style="background:red; color:white"
@@ -64,11 +92,15 @@
      c <input type="text" id="colorTF" value="#ffaa55"><br>
      <button onclick="drawOneCircle()">draw a circle</button>
      <br>
-     
-     n <input type="text" id="nTF" value="10"><br>
-     <button onclick="drawCircles()">draw circles</button>
-   </div>
 
-   <script src="drawgrid.js"></script>
+     n <input type="text" id="nTF" value="10"><br>
+     <button onclick="drawCircle()">draw circle</button>
+   </div>
+     <button onclick="drawSelena()">Draw Selena</button>
+
+
+
+
+   <script src="drawgridSelena.js"></script>
  </body>
 </html>
