@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+  <title> demo1 </title>
+</head>
+<body>
+<h1>Simple Demo</h1>
+your age: <input type="text" id="ageTF"><br>
+<button onClick="calcBirthYear()">
+  Calculate your birth year
+</button>
+<br>
+<label id="resultLabel">
+  You were born in ????
+</label>
+
+<script>
+function calcBirthYear(){
+  let age = ageTF.value
+  let birthyear = 2019 - age
+  resultLabel.innerHTML =
+    "You were born in "+birthyear
+}
+</script>
+</body>
+</html>
