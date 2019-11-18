@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+
+  let canvas=null  // we give this a value in the init method
+  let ctx=null
+
+  function init(){
+    // initialize canvas and ctx after the page is loaded
+    canvas = document.getElementById('canvas')
+    ctx = canvas.getContext('2d')
+    drawBackground()
+  }
+
+
+  function drawCircle(x,y,r){
+    // draw a circle centered at (x,y) with radius r
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.stroke()
+  }
+
+  function drawCircles(){
+    let x = parseInt(xTF.value)
+    let y = parseInt(yTF.value)
+    let r = parseInt(rTF.value)
+    let n = parseInt(nTF.value)
+    let color = colorTF.value
+    for (let a = 0; a<n; a++){
+      drawCircle(x+10*a, y-10*a, 10+r*a)
+    }
+  }
+
+
+  function drawOneCircle(){
+    let x = parseInt(xTF.value)
+    let y = parseInt(yTF.value)
+    let r = parseInt(rTF.value)
+    let color = colorTF.value
+    ctx.fillStyle=color
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.fill()
+  }
+
+  function drawButterfly(){
+    canvas = document.getElementById('canvas')
+    ctx = canvas.getContext('2d')
+    console.log("drawing Robert butterfly")
+
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(300, 150);
+    //ctx.stroke();
+
+
+
+
+    ctx.fillStyle = "blue"
+    ctx.strokeStyle="blue"
+    ctx.lineWidth=7
+
+    ctx.beginPath()
+    ctx.moveTo(214,233)
+
+    ctx.lineTo(214,233)
+    ctx.lineTo(214,234)
+    ctx.lineTo(216,236)
+    ctx.lineTo(214,243)
+    ctx.lineTo(215,252)
+    ctx.lineTo(213,296)
+    ctx.lineTo(214,299)
+    ctx.lineTo(219,304)
+    ctx.lineTo(225,296)
+    ctx.lineTo(226,286)
+    ctx.lineTo(225,277)
+    ctx.lineTo(225,268)
+    ctx.lineTo(225,253)
+    ctx.lineTo(225,241)
+    ctx.lineTo(225,230)
+    ctx.lineTo(225,218)
+    ctx.lineTo(215,227)
+    ctx.lineTo(214,222)
+    ctx.lineTo(215,216)
+    ctx.lineTo(214,231)
+    ctx.lineTo(218,215)
+    ctx.lineTo(223,214)
+    ctx.lineTo(221,216)
+    ctx.lineTo(223,225)
+    ctx.lineTo(216,230)
+    ctx.lineTo(215,234)
+    ctx.lineTo(233,217)
+    ctx.lineTo(238,220)
+    ctx.lineTo(241,221)
+    ctx.lineTo(247,223)
+    ctx.lineTo(249,223)
+    ctx.lineTo(256,216)
+    ctx.lineTo(261,208)
+    ctx.lineTo(266,199)
+    ctx.lineTo(285,171)
+    ctx.lineTo(297,154)
+    ctx.lineTo(308,147)
+    ctx.lineTo(318,142)
+    ctx.lineTo(331,146)
+    ctx.lineTo(341,152)
+    ctx.lineTo(342,163)
+    ctx.lineTo(343,175)
+    ctx.lineTo(344,191)
+    ctx.lineTo(344,209)
+    ctx.lineTo(344,239)
+    ctx.lineTo(344,257)
+    ctx.lineTo(343,275)
+    ctx.lineTo(345,305)
+    ctx.lineTo(344,317)
+    ctx.lineTo(344,341)
+    ctx.lineTo(342,343)
+    ctx.lineTo(339,351)
+    ctx.lineTo(333,344)
+    ctx.lineTo(324,336)
+    ctx.lineTo(302,315)
+    ctx.lineTo(289,307)
+    ctx.lineTo(276,301)
+    ctx.lineTo(271,293)
+    ctx.lineTo(256,280)
+    ctx.lineTo(248,279)
+    ctx.lineTo(241,274)
+    ctx.lineTo(232,267)
+    ctx.lineTo(228,262)
+    ctx.lineTo(207,219)
+    ctx.lineTo(203,220)
+    ctx.lineTo(196,216)
+    ctx.lineTo(191,216)
+    ctx.lineTo(183,219)
+    ctx.lineTo(181,220)
+    ctx.lineTo(176,222)
+    ctx.lineTo(175,227)
+    ctx.lineTo(165,219)
+    ctx.lineTo(141,197)
+    ctx.lineTo(124,184)
+    ctx.lineTo(114,169)
+    ctx.lineTo(109,159)
+    ctx.lineTo(102,153)
+    ctx.lineTo(97,151)
+    ctx.lineTo(80,157)
+    ctx.lineTo(65,159)
+    ctx.lineTo(49,163)
+    ctx.lineTo(40,166)
+    ctx.lineTo(26,180)
+    ctx.lineTo(26,192)
+    ctx.lineTo(22,209)
+    ctx.lineTo(22,224)
+    ctx.lineTo(22,248)
+    ctx.lineTo(26,268)
+    ctx.lineTo(27,292)
+    ctx.lineTo(27,292)
+    ctx.lineTo(27,312)
+    ctx.lineTo(29,333)
+    ctx.lineTo(29,339)
+    ctx.lineTo(28,348)
+    ctx.lineTo(47,340)
+    ctx.lineTo(64,325)
+    ctx.lineTo(80,311)
+    ctx.lineTo(107,302)
+    ctx.lineTo(128,288)
+    ctx.lineTo(151,282)
+    ctx.lineTo(166,276)
+    ctx.lineTo(178,268)
+    ctx.lineTo(192,269)
+    ctx.lineTo(202,248)
+    ctx.lineTo(208,243)
+    ctx.stroke();   
+    console.log("end")
+  }
+
+  </script>
+ </head>
+ <body onload="init();">
+   <h1>drawTim interactive javascript canvas for 11/13</h1>
+   <br>
+
+   <button style="background:red; color:white"
+           onclick="drawBackground()">Clear</button>
+
+   <canvas style="float:left;margin-right:30px" id="canvas" width="500" height="500"></canvas>
+   <br>
+
+   <div>
+     x <input type="text" id="xTF" value="100"><br>
+     y <input type="text" id="yTF" value="200"><br>
+     r <input type="text" id="rTF" value="10"><br>
+     c <input type="text" id="colorTF" value="#ffaa55"><br>
+     <button onclick="drawOneCircle()">draw a circle</button>
+     <br>
+
+     n <input type="text" id="nTF" value="10"><br>
+     <button onclick="drawCircles()">draw circles</button>
+   </div>
+
+<button onclick="drawButterfly()">draw a butterfly</button>
+
+   <script src="drawRobert.js"></script>
+ </body>
+</html>
