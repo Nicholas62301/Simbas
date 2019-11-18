@@ -32,6 +32,20 @@
       drawCircle(x+10*a, y-10*a, 10+r*a)
     }
   }
+  function DrawSmash(){
+ctx.strokeStyle="black"
+ctx.lineWidth=2
+ctx.beginPath()
+ctx.moveTo(120,120)
+ctx.lineTo(120,120)
+ctx.lineTo(120,145)
+ctx.lineTo(160,145)
+ctx.lineTo(180,145)
+ctx.lineTo(190,160)
+ctx.lineTo(190,180)
+ctx.stroke()
+  }
+
 
 
   function drawOneCircle(){
@@ -64,11 +78,11 @@
      c <input type="text" id="colorTF" value="#ffaa55"><br>
      <button onclick="drawOneCircle()">draw a circle</button>
      <br>
-     
+
      n <input type="text" id="nTF" value="10"><br>
      <button onclick="drawCircles()">draw circles</button>
    </div>
-
-   <script src="drawgrid.js"></script>
+<button onclick="drawSmash()">DrawSmash</button>
+   <script src="drawNicholas.js"></script>
  </body>
 </html>

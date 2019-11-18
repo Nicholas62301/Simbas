@@ -19,7 +19,7 @@
       if (major){
         ctx.strokeStyle = "rgb(0,0,0)"
       } else {
-        ctx.strokeStyle = "rgb(200,200,200)"
+        ctx.strokeStyle = "rgb(0,200,200)"
       }
       ctx.beginPath();
       for(let x = 0; x<=canvas.width; x=x+increment){
