@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8"/>
+  <script type="application/javascript">
+
+  let canvas=null  // we give this a value in the init method
+  let ctx=null
+
+  function init(){
+    // initialize canvas and ctx after the page is loaded
+    canvas = document.getElementById('canvas')
+    ctx = canvas.getContext('2d')
+    drawBackground()
+  }
+
+
+  function drawCircle(x,y,r){
+    // draw a circle centered at (x,y) with radius r
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.stroke()
+  }
+
+  function drawCircles(){
+    let x = parseInt(xTF.value)
+    let y = parseInt(yTF.value)
+    let r = parseInt(rTF.value)
+    let n = parseInt(nTF.value)
+    let color = colorTF.value
+    for (let a = 0; a<n; a++){
+      drawCircle(x+10*a, y-10*a, 10+r*a)
+    }
+  }
+
+
+  function drawOneCircle(){
+    let x = parseInt(xTF.value)
+    let y = parseInt(yTF.value)
+    let r = parseInt(rTF.value)
+    let color = colorTF.value
+    ctx.fillStyle=color
+    ctx.beginPath();
+    ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.fill()
+  }
+
+  function drawButterfly(){
+    p0=(214,233)
+p1=(214,233)
+p2=(214,234)
+p3=(216,236)
+p4=(214,243)
+p5=(215,252)
+p6=(213,296)
+p7=(214,299)
+p8=(219,304)
+p9=(225,296)
+p10=(226,286)
+p11=(225,277)
+p12=(225,268)
+p13=(225,253)
+p14=(225,241)
+p15=(225,230)
+p16=(225,218)
+p17=(215,227)
+p18=(214,222)
+p19=(215,216)
+p20=(214,231)
+p21=(218,215)
+p22=(223,214)
+p23=(221,216)
+p24=(223,225)
+p25=(216,230)
+p26=(215,234)
+p27=(233,217)
+p28=(238,220)
+p29=(241,221)
+p30=(247,223)
+p31=(249,223)
+p32=(256,216)
+p33=(261,208)
+p34=(266,199)
+p35=(285,171)
+p36=(297,154)
+p37=(308,147)
+p38=(318,142)
+p39=(331,146)
+p40=(341,152)
+p41=(342,163)
+p42=(343,175)
+p43=(344,191)
+p44=(344,209)
+p45=(344,239)
+p46=(344,257)
+p47=(343,275)
+p48=(345,305)
+p49=(344,317)
+p50=(344,341)
+p51=(342,343)
+p52=(339,351)
+p53=(333,344)
+p54=(324,336)
+p55=(302,315)
+p56=(289,307)
+p57=(276,301)
+p58=(271,293)
+p59=(256,280)
+p60=(248,279)
+p61=(241,274)
+p62=(232,267)
+p63=(228,262)
+p64=(207,219)
+p65=(203,220)
+p66=(196,216)
+p67=(191,216)
+p68=(183,219)
+p69=(181,220)
+p70=(176,222)
+p71=(175,227)
+p72=(165,219)
+p73=(141,197)
+p74=(124,184)
+p75=(114,169)
+p76=(109,159)
+p77=(102,153)
+p78=(97,151)
+p79=(80,157)
+p80=(65,159)
+p81=(49,163)
+p82=(40,166)
+p83=(26,180)
+p84=(26,192)
+p85=(22,209)
+p86=(22,224)
+p87=(22,248)
+p88=(26,268)
+p89=(27,292)
+p90=(27,292)
+p91=(27,312)
+p92=(29,333)
+p93=(29,339)
+p94=(28,348)
+p95=(47,340)
+p96=(64,325)
+p97=(80,311)
+p98=(107,302)
+p99=(128,288)
+p100=(151,282)
+p101=(166,276)
+p102=(178,268)
+p103=(192,269)
+p104=(202,248)
+p105=(208,243)
+  }
+
+  </script>
+ </head>
+ <body onload="init();">
+   <h1>drawTim interactive javascript canvas for 11/13</h1>
+   <br>
+
+   <button style="background:red; color:white"
+           onclick="drawBackground()">Clear</button>
+
+   <canvas style="float:left;margin-right:30px" id="canvas" width="500" height="500"></canvas>
+   <br>
+
+   <div>
+     x <input type="text" id="xTF" value="100"><br>
+     y <input type="text" id="yTF" value="200"><br>
+     r <input type="text" id="rTF" value="10"><br>
+     c <input type="text" id="colorTF" value="#ffaa55"><br>
+     <button onclick="drawOneCircle()">draw a circle</button>
+     <br>
+
+     n <input type="text" id="nTF" value="10"><br>
+     <button onclick="drawCircles()">draw circles</button>
+   </div>
+
+   <script src="drawgrid.js"></script>
+ </body>
+</html>
