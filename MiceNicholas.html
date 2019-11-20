@@ -49,6 +49,15 @@
     ctx.arc(x,y,r,0,2*Math.PI,true)
     ctx.stroke()
   }
+  function mouseMove(event){
+    const x = event.offsetX
+    const y = event.offsetY
+    // put your own code in here!
+    if (event.buttons==1){ // only draw if they are pushing the button!
+        ctx.fillRect(x,y,10,20)
+    }
+}
+
 
   function fillCircle(x,y,r){
     // draw a circle centered at (x,y) with radius r
