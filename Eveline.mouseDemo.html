@@ -55,9 +55,43 @@
     // put in your own code to draw something interesting
     // at starting here ...
     drawCircle(x,y,10)
+    drawThing(x,y)
   }
 
+  function drawThing(x,y){
+    cxt = ctx
+    ctx.strokeStyle="purple"
+    ctx.fillStyle="rgba(0,255,255,0.1)"
+  cxt.beginPath()
+  cxt.moveTo(x,y)
+  cxt.lineTo(x=199-98,y=101+98)
+  cxt.lineTo(x=300-98,y=100+98)
+  ctx.lineTo(x=345-98,y=130+98)
+ ctx.lineTo(x=346-98,y=159+98)
+ ctx.lineTo(x=346-98,y=168+98)
+ ctx.lineTo(x=346-98,y=171+98)
+ ctx.lineTo(x=309-98,y=214+98)
+ ctx.lineTo(x=273-98,y=215+98)
+ ctx.lineTo(x=243-98,y=216+98)
+ ctx.lineTo(x=207-98,y=215+98)
+ ctx.lineTo(x=175-98,y=189+98)
+ ctx.lineTo(x=169-98,y=146+98)
+ ctx.lineTo(x=201-98,y=99+98)
+ ctx.stroke()
+ ctx.fill()
+         drawCircle(210,160,20)
+        drawCircle(300,160,20)
 
+        cxt.lineTo(199,101)
+        cxt.lineTo(300,100)
+        ctx.lineTo(345,130)
+        ctx.stroke()
+
+        cxt.lineTo(210,210)
+        cxt.lineTo(300,100)
+        ctx.lineTo(345,130)
+        ctx.stroke()
+ }
 
 
   function drawCircle(x,y,r){
