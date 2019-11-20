@@ -170,8 +170,9 @@
     ctx.lineTo(192,269)
     ctx.lineTo(202,248)
     ctx.lineTo(208,243)
-    ctx.stroke();   
+    ctx.stroke();
     console.log("end")
+    ctx.lineWidth=1
   }
 
   </script>
@@ -186,17 +187,7 @@
    <canvas style="float:left;margin-right:30px" id="canvas" width="500" height="500"></canvas>
    <br>
 
-   <div>
-     x <input type="text" id="xTF" value="100"><br>
-     y <input type="text" id="yTF" value="200"><br>
-     r <input type="text" id="rTF" value="10"><br>
-     c <input type="text" id="colorTF" value="#ffaa55"><br>
-     <button onclick="drawOneCircle()">draw a circle</button>
-     <br>
 
-     n <input type="text" id="nTF" value="10"><br>
-     <button onclick="drawCircles()">draw circles</button>
-   </div>
 
 <button onclick="drawButterfly()">draw a butterfly</button>
 
