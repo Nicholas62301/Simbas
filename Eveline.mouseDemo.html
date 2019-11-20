@@ -26,14 +26,31 @@
 
   function mouseMove(event){
     //console.log(event.buttons)
-    ctx.fillStyle="rgba(0,0,255,0.3)"
+    ctx.fillStyle="rgba(100,0,700,0.5)"
     const x = event.offsetX
     const y = event.offsetY
     if (event.buttons==1){  // see if the mouse button is pressed
-      ctx.fillRect(x,y,10,30)
+      ctx.fillRect(x,y,40,50)
     }
   }
-
+    function mouseMove(event){
+      //console.log(event.buttons)
+      ctx.fillStyle="rgba(100,0,300,0.5)"
+      const x = event.offsetX
+      const y = event.offsetY
+      if (event.buttons==1){  // see if the mouse button is pressed
+        ctx.fillRect(x,y,40,50)
+      }
+  }
+  function mouseMove(event){
+    //console.log(event.buttons)
+    ctx.fillStyle="rgba(230,0,400,0.5)"
+    const x = event.offsetX
+    const y = event.offsetY
+    if (event.buttons==1){  // see if the mouse button is pressed
+      ctx.fillRect(x,y,40,50)
+    }
+  }
   function drawObject(x,y){
     // put in your own code to draw something interesting
     // at starting here ...
