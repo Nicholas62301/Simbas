@@ -27,10 +27,12 @@
   function mouseMove(event){
     //console.log(event.buttons)
     ctx.fillStyle="rgba(0,0,255,0.3)"
+    ctx.strokeStyle="rgba(255,0,255,0.3)"
     const x = event.offsetX
     const y = event.offsetY
     if (event.buttons==1){  // see if the mouse button is pressed
       ctx.fillRect(x,y,10,30)
+      drawCircle(x,y,1)
     }
   }
 
@@ -45,8 +47,30 @@
 
   function drawCircle(x,y,r){
     // draw a circle centered at (x,y) with radius r
+    ctx.strokeStyle="rgba(255,255,0,0.1)"
+    ctx.lineWidth=8
     ctx.beginPath();
     ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.moveTo(300+x-200,-100+y+141)
+    ctx.lineTo(290+x-200,-100+y+123)
+    ctx.lineTo(268+x-200,-100+y+104)
+    ctx.lineTo(247+x-200,-100+y+102)
+    ctx.lineTo(227+x-200,-100+y+111)
+    ctx.lineTo(214+x-200,-100+y+132)
+    ctx.lineTo(226+x-200,-100+y+153)
+    ctx.lineTo(248+x-200,-100+y+167)
+    ctx.lineTo(266+x-200,-100+y+172)
+    ctx.lineTo(289+x-200,-100+y+179)
+    ctx.lineTo(300+x-200,-100+y+187)
+    ctx.lineTo(300+x-200,-100+y+200)
+    ctx.lineTo(293+x-200,-100+y+215)
+    ctx.lineTo(284+x-200,-100+y+224)
+    ctx.lineTo(264+x-200,-100+y+232)
+    ctx.lineTo(246+x-200,-100+y+229)
+    ctx.lineTo(228+x-200,-100+y+222)
+    ctx.lineTo(219+x-200,-100+y+210)
+    ctx.lineTo(208+x-200,-100+y+202)
+    ctx.lineTo(203+x-200,-100+y+188)
     ctx.stroke()
   }
 
@@ -64,7 +88,7 @@
    <br>
 
    <button onclick="drawBackground()">Clear</button>
-   <button onclick="drawTim(200,200)">Draw</button>
+   <button onclick="drawSelena(200,200)">Draw</button>
 
    <canvas style="float:left;margin-right:30px"
            id="canvas" width="500" height="500">
