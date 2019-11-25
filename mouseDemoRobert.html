@@ -21,16 +21,23 @@
     x = event.offsetX
     y = event.offsetY
     //
-    drawObject(x,y)
-  }
+    ctx.fillStyle="rgba(0,0,255,0.3)"
+  //ctx.fillRect(x,y,60,30)
+  ctx.fillStyle="rgba(200,0,255,0.3)"
+  fillCircle(x,y+5,30)
+  ctx.fillStyle="rgba(0,0,55,0.3)"
+  fillCircle(x+10,y,5)
+  ctx.fillStyle="rgba(0,0,55,0.3)"
+  fillCircle(x-10,y,5)
 
+}
   function mouseMove(event){
     //console.log(event.buttons)
-    ctx.fillStyle="rgba(0,0,255,0.3)"
+    ctx.fillStyle="rgba(0,0,255,0.2)"
     const x = event.offsetX
     const y = event.offsetY
     if (event.buttons==1){  // see if the mouse button is pressed
-      ctx.fillRect(x,y,70,10)
+      ctx.fillRect(x-5,y+5,50,20)
     }
   }
 
