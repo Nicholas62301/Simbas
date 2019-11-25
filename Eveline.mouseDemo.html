@@ -21,26 +21,40 @@
     x = event.offsetX
     y = event.offsetY
     //
-    drawObject(x,y)
+    drawdiamond(x,y)
+    //drawObject(x,y)
   }
 
   function mouseMove(event){
     //console.log(event.buttons)
-    ctx.fillStyle="rgba(100,0,700,0.5)"
+    ctx.fillStyle="rgba(300,5,700,1.0)"
     const x = event.offsetX
     const y = event.offsetY
     if (event.buttons==1){  // see if the mouse button is pressed
-      ctx.fillRect(x,y,40,50)
+      ctx.fillRect(x,y,80,100)
     }
   }
     function mouseMove(event){
       //console.log(event.buttons)
-      ctx.fillStyle="rgba(100,0,300,0.5)"
+      ctx.fillStyle="rgba(100,4,300,0.5)"
       const x = event.offsetX
       const y = event.offsetY
       if (event.buttons==1){  // see if the mouse button is pressed
         ctx.fillRect(x,y,40,50)
       }
+  }
+
+  function drawdiamond(x,y){
+    ctx.strokeStyle="blue"
+    ctx.lineWidth=5
+    ctx.beginPath()
+    ctx.moveTo(x,y-50)
+    ctx.lineTo(x+50,y)
+    ctx.lineTo(x,y+50)
+    ctx.lineTo(x-50,y)
+    ctx.lineTo(x,y-50)
+    ctx.fill()
+    ctx.lineWidth=1
   }
   function mouseMove(event){
     //console.log(event.buttons)
@@ -62,25 +76,7 @@
     cxt = ctx
     ctx.strokeStyle="purple"
     ctx.fillStyle="rgba(0,255,255,0.1)"
-  cxt.beginPath()
-  cxt.moveTo(x,y)
-  cxt.lineTo(x=199-98,y=101+98)
-  cxt.lineTo(x=300-98,y=100+98)
-  ctx.lineTo(x=345-98,y=130+98)
- ctx.lineTo(x=346-98,y=159+98)
- ctx.lineTo(x=346-98,y=168+98)
- ctx.lineTo(x=346-98,y=171+98)
- ctx.lineTo(x=309-98,y=214+98)
- ctx.lineTo(x=273-98,y=215+98)
- ctx.lineTo(x=243-98,y=216+98)
- ctx.lineTo(x=207-98,y=215+98)
- ctx.lineTo(x=175-98,y=189+98)
- ctx.lineTo(x=169-98,y=146+98)
- ctx.lineTo(x=201-98,y=99+98)
- ctx.stroke()
- ctx.fill()
-         drawCircle(210,160,20)
-        drawCircle(300,160,20)
+
 
         cxt.lineTo(199,101)
         cxt.lineTo(300,100)
@@ -111,7 +107,7 @@
   </script>
  </head>
  <body onload="init();">
-   <h1>MouseDemo interactive javascript canvas for 11/20</h1>
+   <h1>Eveline MouseDemo </h1>
    <br>
 
    <button onclick="drawBackground()">Clear</button>
