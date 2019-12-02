@@ -32,20 +32,29 @@
       drawCircle(x+10*a, y-10*a, 10+r*a)
     }
   }
+
+
+
   function DrawSmash(){
 ctx.strokeStyle="black"
 ctx.lineWidth=2
 ctx.beginPath()
-ctx.moveTo(120,120)
-ctx.lineTo(120,120)
-ctx.lineTo(120,145)
-ctx.lineTo(160,145)
-ctx.lineTo(180,145)
-ctx.lineTo(190,160)
-ctx.lineTo(190,180)
+ctx.moveTo(120,200)
+ctx.lineTo(120,200)
+ctx.lineTo(120,260)
+ctx.lineTo(100,260)
+ctx.lineTo(100,280)
+ctx.lineTo(120,280)
+ctx.lineTo(120,300)
+ctx.lineTo(140,300)
+ctx.lineTo(140,280)
+ctx.lineTo(200,280)
+ctx.lineTo(200,260)
+ctx.lineTo(140,260)
+ctx.lineTo(140,200)
+ctx.lineTo(120,200)
 ctx.stroke()
-  }
-
+}
 
 
   function drawOneCircle(){
@@ -56,7 +65,7 @@ ctx.stroke()
     ctx.fillStyle=color
     ctx.beginPath();
     ctx.arc(x,y,r,0,2*Math.PI,true)
-    ctx.fill()
+    ctx.stroke()
   }
 
   </script>
@@ -82,7 +91,7 @@ ctx.stroke()
      n <input type="text" id="nTF" value="10"><br>
      <button onclick="drawCircles()">draw circles</button>
    </div>
-<button onclick="drawSmash()">DrawSmash</button>
+<button onclick="DrawSmash()">DrawSmash</button>
    <script src="drawNicholas.js"></script>
  </body>
 </html>
