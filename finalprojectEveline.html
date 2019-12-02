@@ -9,22 +9,14 @@
 
   <script type="application/javascript">
 
-  function calchoursworked(){
-    let hour = timeTF.value
-    let rate = rateTF.value
+  function moneyUber(){
+    let time = timeTF.value
+    let cost = costTF.value
     resultLabel.innerHTML =
-      "Your pay is "+hour*rate
+      "Your pay is "+time*cost
   }
-  function calcBMI(){
-    w = weight.value  // read weight from element with id="weight"
-    h = height.value  // read height from element with id="height"
-    bmi = 703*w/(h*h)  // calculate the Body Mass Index
-    BMI.innerHTML =    // write into label element with id "BMI"
-        "You're BMI is "
-        +bmi.toFixed(1)  // round BMI to 1 decimal place
 
 
-  }
   let canvas=null  // we give this a value in the init method
   let ctx=null
 
@@ -83,7 +75,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.arc(x,y,r,0,2*Math.PI,true)
     ctx.fill()
   }
-  function drawTim(){
+  function drawEveline(){
     ctx.strokeStyle="blue"
     ctx.lineWidth=5
     ctx.beginPath()
@@ -112,16 +104,17 @@ canvas.addEventListener('mousemove',mouseMove,false)
      <div class="col">
        <h1>Calculations</h1>
        Put some textfields, labels, and buttons here ..
-       <h1> Your Pay</h1>
-       your hours worked: <input type="text" id="timeTF"><br>
-       your pay rate: <input type="text" id="rateTF"><br>
-       <button onClick="calchoursworked()">
-         Calculate your hours worked
+       <h1>  Money spent on Uber </h1>
+       each time you used Uber: <input type="number" id="timeTF"><br>
+       cost each time: <input type="number" id="costTF"><br>
+       <button onClick="moneyUber()">
+         Calculate your money spent
        </button>
        <br>
        <label id="resultLabel">
-         You worked????
+         You spent????
        </label>
+
 
      </div>
      <div class="col">
@@ -135,7 +128,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawTim()">Draw Tim</button>
+       <br> <button onclick="drawEveline()">Draw Tim</button>
        ....
      </div>
 
