@@ -82,9 +82,9 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.strokeStyle="blue"
     ctx.lineWidth=5
     ctx.beginPath()
-    ctx.moveTo(198,100)
-    ctx.lineTo(300,100)
-    ctx.lineTo(362,150)
+    ctx.moveTo(200,100)
+    ctx.lineTo(400,100)
+    ctx.lineTo(362,180)
     ctx.lineTo(364,213)
     ctx.lineTo(308,263)
     ctx.lineTo(199,263)
@@ -100,21 +100,20 @@ canvas.addEventListener('mousemove',mouseMove,false)
    <div class="container">
      <div class="jumbotron">
        <h1>Robert's Final Project .... </h1>
-       <p>This is a minimal demo </p>
+       <p>This is a weasel wezze </p>
      </div>
 
    <div class="row">
      <div class="col">
        <h1>Calculations</h1>
        Put some textfields, labels, and buttons here ..
-       <h1>Body Mass Index</h1>
+       <h1>volume of a can</h1>
        What is your full name? <input type="text" id="fullName"><br>
-       Enter your weight in pounds <input type="number" id="weight"><br>
-       Enter your height in inches <input type="number" id="height"><br>
-       <button class="btn btn-lg btn-danger"
-               onClick="calcBMI()">
-           Calculate BMI
-       </button>
+       what is radius of can in inches <input type="number" id="radius"><br>
+       what is height of can inches <input type="number" id="height"><br>
+     <button class="btn btn-lg btn-danger" onClick="calcRobert()"><br>
+              calculate volume of a can
+     </button>
        <br>
        <hr>
        <h2>Results</h2>
@@ -123,16 +122,16 @@ canvas.addEventListener('mousemove',mouseMove,false)
      </div>
      <div class="col">
        <h1>Canvas</h1>
-       <canvas style="float:left;margin-right:30px" id="canvas" width="500" height="500"></canvas>
+       <canvas style="float:left;margin-right:50px" id="canvas" width="400" height="500"></canvas>
 
 
      </div>
      <div class="col">
        <h1>Buttons etc to draw on Canvas</h1>
-       <button style="background:red; color:white"
+       <button style="background:greenS; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawTim()">Draw Tim</button>
+       <br> <button onclick="drawTim()">Draw Robert</button>
        ....
      </div>
 
