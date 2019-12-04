@@ -25,8 +25,8 @@
     canvas = document.getElementById('canvas')
     ctx = canvas.getContext('2d')
     drawBackground()
-    canvas.addEventListener('click',mouseClick,false)
-canvas.addEventListener('mousemove',mouseMove,false)
+    canvas.addEventListener('click',mouseClick,true)
+canvas.addEventListener('mousemove',mouseMove,true)
   }
 
   function mouseClick(event){
@@ -34,7 +34,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     const x = event.offsetX
     const y = event.offsetY
     //draw something here ...
-    ctx.fillRect(x,y,20,50)
+    ctx.fillcircle(x,y,10,180)
   }
 
   function mouseMove(event){
@@ -76,19 +76,19 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.fill()
   }
   function drawEveline(){
-    ctx.strokeStyle="blue"
+    ctx.fillStyle="blue"
     ctx.lineWidth=5
     ctx.beginPath()
-    ctx.moveTo(198,100)
-    ctx.lineTo(300,100)
-    ctx.lineTo(362,150)
-    ctx.lineTo(364,213)
-    ctx.lineTo(308,263)
-    ctx.lineTo(199,263)
-    ctx.lineTo(136,211)
-    ctx.lineTo(142,141)
-    ctx.lineTo(195,102)
-    ctx.stroke()
+    ctx.moveTo(280,200)
+    ctx.lineTo(350,100)
+    ctx.lineTo(400,300)
+    ctx.lineTo(380,300)
+    ctx.lineTo(350,300)
+    ctx.lineTo(300,350)
+    ctx.lineTo(240,200)
+    ctx.lineTo(280,200)
+    ctx.lineTo(280,200)
+    ctx.fill()
   }
 
   </script>
@@ -128,7 +128,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawEveline()">Draw Tim</button>
+       <br> <button onclick="drawEveline()">Draw Eve</button>
        ....
      </div>
 
