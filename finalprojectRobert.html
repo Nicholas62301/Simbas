@@ -10,13 +10,13 @@
   <script type="application/javascript">
 
 
-  function calcBMI(){
-    w = weight.value  // read weight from element with id="weight"
-    h = height.value  // read height from element with id="height"
-    bmi = 703*w/(h*h)  // calculate the Body Mass Index
-    BMI.innerHTML =    // write into label element with id "BMI"
-        "You're BMI is "
-        +bmi.toFixed(1)  // round BMI to 1 decimal place
+  function calcDunkins(){
+    t = timespw.value  // read weight from element with id="weight"
+    c = cost.value  // read height from element with id="height"
+    totalcost = t*c  // calculate the Body Mass Index
+    total.innerHTML =    // write into label element with id "BMI"
+        "You're total is "
+        +totalcost.toFixed(2)  // round BMI to 1 decimal place
 
 
   }
@@ -107,17 +107,17 @@ canvas.addEventListener('mousemove',mouseMove,false)
      <div class="col">
        <h1>Calculations</h1>
        Put some textfields, labels, and buttons here ..
-       <h1>volume of a can</h1>
+       <h1>Costs at dunkins</h1>
        What is your full name? <input type="text" id="fullName"><br>
-       what is radius of can in inches <input type="number" id="radius"><br>
-       what is height of can inches <input type="number" id="height"><br>
-     <button class="btn btn-lg btn-danger" onClick="calcVolume()"><br>
-              calculate volume of a can
+       how many times I visit Dunkins  <input type="number" id="timespw"><br>
+       How much I spend <input type="number" id="cost"><br>
+     <button class="btn btn-lg btn-danger" onClick="calcDunkins()"><br>
+              calculate costs at Dunkins
      </button>
        <br>
        <hr>
        <h2>Results</h2>
-       <label id="BMI">????</label>
+       <label id="total">????</label>
 
      </div>
      <div class="col">
