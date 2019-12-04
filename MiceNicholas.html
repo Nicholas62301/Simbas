@@ -12,7 +12,7 @@
     canvas = document.getElementById('canvas')
     ctx = canvas.getContext('2d')
     drawBackground()
-    canvas.addEventListener('click',mouseClick,false)
+    canvas.addEventListener('dblclick',mouseClick,false)
     canvas.addEventListener('mousemove',mouseMove,false)
   }
 
@@ -26,18 +26,47 @@
 
   function mouseMove(event){
     //console.log(event.buttons)
-    ctx.fillStyle="rgba(0,0,255,0.3)"
+    ctx.fillStyle="rgba(0,255,255,0.3)"
     const x = event.offsetX
     const y = event.offsetY
     if (event.buttons==1){  // see if the mouse button is pressed
       ctx.fillRect(x,y,10,30)
+      DrawSmash(x,y)
     }
   }
-
+  function DrawSmash(x,y){
+ctx.strokeStyle="black"
+drawCircle(x,y,60)
+ctx.lineWidth=2
+ctx.beginPath()
+ctx.moveTo(120-150+x,y-150+200)
+ctx.lineTo(120-150+x,y-150+200)
+ctx.lineTo(120-150+x,y-150+260)
+ctx.lineTo(100-150+x,y-150+260)
+ctx.lineTo(100-150+x,y-150+280)
+ctx.lineTo(120-150+x,y-150+280)
+ctx.lineTo(120-150+x,y-150+300)
+ctx.lineTo(140-150+x,y-150+300)
+ctx.lineTo(140-150+x,y-150+280)
+ctx.lineTo(200-150+x,y-150+280)
+ctx.lineTo(200-150+x,y-150+260)
+ctx.lineTo(140-150+x,y-150+260)
+ctx.lineTo(140-150+x,y-150+200)
+ctx.lineTo(120-150+x,y-150+200)
+ctx.stroke()
+}
   function drawObject(x,y){
     // put in your own code to draw something interesting
     // at starting here ...
-    drawCircle(x,y,10)
+    drawCircle(x+20,y,10)
+
+    fillCircle(x,y,100)
+    ctx.fillStyle="rgba(255,255,255,1)"
+    fillCircle(x,y,75)
+    ctx.fillStyle="rgba(255,0,255,1)"
+    fillCircle(x,y,50)
+    ctx.fillStyle="rgba(255,0,0,1)"
+    fillCircle(x,y,25)
   }
 
 
@@ -49,15 +78,6 @@
     ctx.arc(x,y,r,0,2*Math.PI,true)
     ctx.stroke()
   }
-  function mouseMove(event){
-    const x = event.offsetX
-    const y = event.offsetY
-    // put your own code in here!
-    if (event.buttons==1){ // only draw if they are pushing the button!
-        ctx.fillRect(x,y,10,20)
-    }
-}
-
 
   function fillCircle(x,y,r){
     // draw a circle centered at (x,y) with radius r
@@ -76,7 +96,7 @@
    <button onclick="drawTim(200,200)">Draw</button>
 
    <canvas style="float:left;margin-right:30px"
-           id="canvas" width="500" height="500">
+           id="canvas" width="1500" height="1500">
    </canvas>
 
    <script src="drawgrid.js"></script>
