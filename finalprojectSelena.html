@@ -9,15 +9,15 @@
 
   <script type="application/javascript">
 
-
-  function calcBMI(){
-    w = weight.value  // read weight from element with id="weight"
+  function calcAreas(){
+    b = base.value  // read base from element with id="base"
     h = height.value  // read height from element with id="height"
-    bmi = 703*w/(h*h)  // calculate the Body Mass Index
-    BMI.innerHTML =    // write into label element with id "BMI"
-        "You're BMI is "
-        +bmi.toFixed(1)  // round BMI to 1 decimal place
-
+    area = (b*h)  // calculate the Area
+    console.log("hello world")
+    console.log(area)
+    Area.innerHTML =    // write into label element with id "BMI"
+        "The area of the rectangle is "
+        +area.toFixed(1)  // round area to 1 decimal place
 
   }
   let canvas=null  // we give this a value in the init method
@@ -118,6 +118,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.lineTo(317-200+x,y-200+384)
     ctx.lineTo(318-200+x,y-200+370)
     ctx.stroke()
+    ctx.lineWidth=1
   }
 
   </script>
@@ -125,26 +126,28 @@ canvas.addEventListener('mousemove',mouseMove,false)
  <body onload="init();">
    <div class="container">
      <div class="jumbotron">
-       <h1>Selena's Final Project .... </h1>
+       <h1>Selena Ou's Final Project</h1>
        <p>My last gift to this class. May it be in you favor! </p>
      </div>
 
    <div class="row">
      <div class="col">
        <h1>Calculations</h1>
-       Put some textfields, labels, and buttons here ..
-       <h1>Body Mass Index</h1>
-       What is your full name? <input type="text" id="fullName"><br>
-       Enter your weight in pounds <input type="number" id="weight"><br>
+       <h2>Area of Rectangle</h2>
+       Do you like rectangles? <form action="" method="post">
+       <input type="checkbox" name="answer" value="no" /> Yes
+       <input type="checkbox" name="answer" value="yes" /> No
+       </form>
+       Enter your base in inches <input type="number" id="base"><br>
        Enter your height in inches <input type="number" id="height"><br>
        <button class="btn btn-lg btn-danger"
-               onClick="calcBMI()">
-           Calculate BMI
+               onClick="calcAreas()">
+           Calculate Area
        </button>
        <br>
        <hr>
        <h2>Results</h2>
-       <label id="BMI">????</label>
+       <label id="Area">????</label>
 
      </div>
      <div class="col">
@@ -154,14 +157,35 @@ canvas.addEventListener('mousemove',mouseMove,false)
 
      </div>
      <div class="col">
-       <h1>Buttons etc to draw on Canvas</h1>
+       <h3>Buttons For Canvas</h3>
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawSelena()">Draw Selena</button>
+       <br> <button onclick="drawSelena(200,300)">Draw Selena</button>
        ....
      </div>
+   </div>
 
+<br>
+     <h1>About the Creator: Selena Ou</h1>
+
+ <img src="selenaou.jpeg" width="200">
+
+     <ul>
+     <li> From: Lowell, Massachusetts </li>
+     <li> Trilingual: English, Khmer, Thai </li>
+     <li> Writes letters for Fun!</li>
+ </ul>
+
+     <table class="table table-bordered table-striped">
+         <thead>
+             <tr>  <th>Favorite Food</th>   <th>Least Favorite Food</th>  </tr>
+         </thead>
+         <tbody>
+           <tr> <td> Chicken Alfredo </td>    <td> Parmesan Chicken </td> </tr>
+           <tr> <td> Coke </td>    <td> Sparkling Water </td> </tr>
+           <tr> <td> Hot Cheetos </td>    <td> Barbecue Chips </td> </tr>
+         </tbody>
 
 
  <!-- Optional JavaScript -->
