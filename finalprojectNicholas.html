@@ -10,18 +10,16 @@
   <script type="application/javascript">
 
 
-  function calcBMI(){
-    w = weight.value  // read weight from element with id="weight"
+  function CalcArea(){
+    b = height.value  // read base from element with id="base"
     h = height.value  // read height from element with id="height"
-    bmi = 703*w/(h*h)  // calculate the Body Mass Index
-    BMI.innerHTML =    // write into label element with id "BMI"
-        "Your BMI is "
-        +bmi.toFixed(1)  // round BMI to 1 decimal place
+      = (b*h)*/2)
+     console.log(area)
+    Area.innerHTML =    // write into label element with id "Area"
+        "Your Area is "
+        +area.toFixed(1)  // round area to 1 decimal place
+}
 
-
-  }
-  let canvas=null  // we give this a value in the init method
-  let ctx=null
 
   function init(){
     // initialize canvas and ctx after the page is loaded
@@ -64,7 +62,6 @@ canvas.addEventListener('mousemove',mouseMove,false)
     let color = colorTF.value
     for (let a = 0; a<n; a++){
       drawCircle(x+10*a, y-10*a, 10+r*a)
-    }
   }
 
 
@@ -79,14 +76,41 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.fill()
   }
 
-  function drawMickey(){
+  function drawRussianOrthodox(){
     ctx.strokeStyle="black"
     ctx.lineWidth=2
-    ctx.drawCircle(200,200,50)
-    ctx.beginPath()
-    ctx.moveTo(198,100)
+    ctx.lineTo(130,30)
+    ctx.lineTo(130,50)
+    ctx.lineTo(110,50)
+    ctx.lineTo(110,70)
+    ctx.lineTo(130,70)
+    ctx.lineTo(130,90)
+    ctx.lineTo(90,90)
+    ctx.lineTo(90,110)
+    ctx.lineTo(130,110)
+    ctx.lineTo(130,170)
+    ctx.lineTo(110,155)
+    ctx.lineTo(110,180)
+    ctx.lineTo(130,190)
+    ctx.lineTo(130,210)
+    ctx.lineTo(150,210)
+    ctx.lineTo(150,200)
+    ctx.lineTo(160,210)
+    ctx.lineTo(175,200)
+    ctx.lineTo(160,180)
+    ctx.lineTo(155,115)
+    ctx.lineTo(200,115)
+    ctx.lineTo(200,85)
+    ctx.lineTo(150,90)
+    ctx.lineTo(154,70)
+    ctx.lineTo(178,70)
+    ctx.lineTo(178,45)
+    ctx.lineTo(154,45)
+    ctx.lineTo(155,29)
+    ctx.lineTo(127,29)
     ctx.stroke()
   }
+}
 
   </script>
  </head>
@@ -94,26 +118,27 @@ canvas.addEventListener('mousemove',mouseMove,false)
    <div class="container">
      <div class="jumbotron">
        <h1>Nicholas' Final Project .... </h1>
-       <p>This is a minimal demo </p>
+       <p> Poopy </p>
      </div>
 
    <div class="row">
      <div class="col">
        <h1>Calculations</h1>
-       Put some textfields, labels, and buttons here ..
-       <h1>Body Mass Index</h1>
-       What is your full name? <input type="text" id="fullName"><br>
-       Enter your weight in pounds <input type="number" id="weight"><br>
-       Enter your height in inches <input type="number" id="height"><br>
+     Hi
+       <h1>Area of Triangle</h1>
+       Why do you have a triangle??? <input type="text" id="fullName"><br>
+       Enter the base  <input type="number" id="base"><br>
+       Enter the height <input type="number" id="height"><br>
+
+
        <button class="btn btn-lg btn-danger"
-               onClick="calcBMI()">
-           Calculate BMI
+               onClick="CalcArea()">
+           Calculate Area
        </button>
        <br>
        <hr>
        <h2>Results</h2>
-       <label id="BMI">????</label>
-
+       <label id="Area">????</label>
      </div>
      <div class="col">
        <h1>Canvas</h1>
@@ -126,9 +151,53 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawMickey()">Draw Mickey</button>
+       <br> <button onclick="drawRussianOrthodox()">Draw Russian Orthodox Cross</button>
        ....
      </div>
+     <div>
+       <h1>This is my biography! (Nicholas Ong)</h1>
+       <p>
+         Hello, my name is Nicholas Ong and I was born and raised in Providence, Rhode Island.
+         I'm Cambodian-American, and I am a first generation college student going to Brandeis University
+         My birthday is on June 23rd, 2001
+       </p>
+    </div>
+    <div>
+      <ul>
+      I know how to solve a Rubik's Cube in 38 seconds
+      </ul>
+      <ul>
+    I never broke a bone in my body
+    </ul>
+    <ul>
+      I have a PomChi named Cali, we've had her for about 5 years.
+    </ul>
+    <ul>
+      I have a picture down there of me with Bruno the Bear from Brown University,
+      I'm pretty passionate about letting other people know that there are so many more
+      important aspects to Providence than Brown University, and no one really knows what
+      goes on there other than Brown.
+
+
+    <div class="row">
+        <div class="col-sm bg-primary">
+          I used to like to run a lot, but now I dont't have any active hobbies
+        </div>
+
+        <div class="col-sm bg-danger">
+          I only learned to ride a bike when I was in freshman year
+        </div>
+        <div class="col-sm bg-secondary">
+        I have experience with building different structures in my community, one of these structures being a shed
+        for a community farming organization
+      </div>
+    <div class="col-sm bg-danger">
+      I used to ride my bike a lot for exercise, but after I got into an accident I couldn't bring myself to go as fast as I used to.
+    </div>
+    <div class="col-sm bg-primary">
+        <img src=NicholasandBrunotheBear.jpg>
+    </div>
+  </div>
 
 
 
