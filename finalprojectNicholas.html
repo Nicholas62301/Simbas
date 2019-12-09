@@ -15,7 +15,7 @@
     h = height.value  // read height from element with id="height"
     bmi = 703*w/(h*h)  // calculate the Body Mass Index
     BMI.innerHTML =    // write into label element with id "BMI"
-        "You're BMI is "
+        "Your BMI is "
         +bmi.toFixed(1)  // round BMI to 1 decimal place
 
 
@@ -78,19 +78,13 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.arc(x,y,r,0,2*Math.PI,true)
     ctx.fill()
   }
-  function drawTim(){
-    ctx.strokeStyle="blue"
-    ctx.lineWidth=5
+
+  function drawMickey(){
+    ctx.strokeStyle="black"
+    ctx.lineWidth=2
+    ctx.drawCircle(200,200,50)
     ctx.beginPath()
     ctx.moveTo(198,100)
-    ctx.lineTo(300,100)
-    ctx.lineTo(362,150)
-    ctx.lineTo(364,213)
-    ctx.lineTo(308,263)
-    ctx.lineTo(199,263)
-    ctx.lineTo(136,211)
-    ctx.lineTo(142,141)
-    ctx.lineTo(195,102)
     ctx.stroke()
   }
 
@@ -99,10 +93,10 @@ canvas.addEventListener('mousemove',mouseMove,false)
  <body onload="init();">
    <div class="container">
      <div class="jumbotron">
-       <h1>Tim's Final Project .... </h1>
+       <h1>Nicholas' Final Project .... </h1>
        <p>This is a minimal demo </p>
      </div>
-     
+
    <div class="row">
      <div class="col">
        <h1>Calculations</h1>
@@ -132,7 +126,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawTim()">Draw Tim</button>
+       <br> <button onclick="drawMickey()">Draw Mickey</button>
        ....
      </div>
 
