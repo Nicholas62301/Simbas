@@ -76,7 +76,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.fill()
   }
 
-  function drawRussianOrthodox(){
+  function drawRussianOrthodox(x,y){
     ctx.strokeStyle="black"
     ctx.lineWidth=2
     ctx.lineTo(130,30)
@@ -150,9 +150,8 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <h1>Buttons etc to draw on Canvas</h1>
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
+     <br> <button onclick="drawRussianOrthodox"> Praise the LorT </button>
 
-       <br> <button onclick="drawRussianOrthodox()">Draw Russian Orthodox Cross</button>
-       ....
      </div>
      <div>
        <h1>This is my biography! (Nicholas Ong)</h1>
