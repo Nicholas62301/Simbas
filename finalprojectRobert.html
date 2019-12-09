@@ -46,6 +46,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     // put your own code in here!
     if (event.buttons==1){ // only draw if they are pushing the button!
         ctx.fillRect(x,y,10,20)
+        drawRobert(x,y)
     }
 }
 
@@ -78,20 +79,21 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.arc(x,y,r,0,2*Math.PI,true)
     ctx.fill()
   }
-  function drawTim(){
+  function drawRobert(x,y){
     ctx.strokeStyle="blue"
     ctx.lineWidth=5
     ctx.beginPath()
-    ctx.moveTo(200,100)
-    ctx.lineTo(400,100)
-    ctx.lineTo(362,180)
-    ctx.lineTo(364,213)
-    ctx.lineTo(308,263)
-    ctx.lineTo(199,263)
-    ctx.lineTo(136,211)
-    ctx.lineTo(142,141)
-    ctx.lineTo(195,102)
+    ctx.moveTo(200-300+x,y-100+100)
+    ctx.lineTo(400-300+x,y-100+100)
+    ctx.lineTo(362-300+x,y-100+180)
+    ctx.lineTo(364-300+x,y-100+213)
+    ctx.lineTo(308-300+x,y-100+263)
+    ctx.lineTo(199-300+x,y-100+263)
+    ctx.lineTo(136-300+x,y-100+211)
+    ctx.lineTo(142-300+x,y-100+141)
+    ctx.lineTo(195-300+x,y-100+102)
     ctx.stroke()
+    ctx.lineWidth=1
   }
 
   </script>
@@ -106,7 +108,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
    <div class="row">
      <div class="col">
        <h1>Calculations</h1>
-       Put some textfields, labels, and buttons here ..
+       Put some textfields-300+x, labels, and buttons here ..
        <h1>Costs at dunkins</h1>
        What is your full name? <input type="text" id="fullName"><br>
        how many times I visit Dunkins  <input type="number" id="timespw"><br>
@@ -128,14 +130,47 @@ canvas.addEventListener('mousemove',mouseMove,false)
      </div>
      <div class="col">
        <h1>Buttons etc to draw on Canvas</h1>
-       <button style="background:greenS; color:white"
+       <button style="background:blue; color:light blue"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawTim()">Draw Robert</button>
+       <br> <button onclick="drawRobert(300,100)()">Draw Robert</button>
        ....
      </div>
+   </div>
+   <br>
+    <h1>About the Creator: Robert</h1>
+    <img src="max.jpg" width="200">
+   <div class="col">
+     I am cool!
+   Young wild and free forever!!!
+   I was born in Democratic Republic of Congo
+   first generation to college
+   I come from Lowell Mass
+   Looking forward to join the law enforcement
+   As a state trooper.
+   <br>
+ </div>
+ </div>
+ <ul>
+   <li>moves out of the crowds</li>
+   <li>Forges his own path ! </li>
+ </ul>
 
+ <table class="table table-bordered table-striped">
 
+   <thead>
+     <tr> <th> Secret Skills</th>   <th> Favorites</th> <th> MISC.</th>  </tr>
+   </thead>
+
+   <tbody>
+     <h1>FUN FACTS</h1>
+       <tr> <td> I can play drums,whistle , and vuvuzela </td>   <td> Movie/shows:The originals/spartacus</td>  <td> Never Broke a bone </td></tr>
+       <tr> <td> Pain is my strength, love November skies A light carries on!:)</td>   <td> Topic:nature</td> <td> Hate crocodiles </td> </tr>
+       <tr> <td> I can do a two hundred pushups </td>   <td> Araali:Dr.BEEFCAKE/MAX GANNICUS </td> <td> Love Beasts of the dark </td> </tr>
+       <tr> <td> I can speak ten languages</i> </td>   <td> State:Lowell Mass originally Prince de RD congo</td> <td> Wanna be a state trooper </td></tr>
+   </tbody>
+
+ </table>
 
  <!-- Optional JavaScript -->
  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
