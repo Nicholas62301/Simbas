@@ -10,8 +10,6 @@
   <script type="application/javascript">
 
 
-
-
   function moneyUber(){
     let time = timeTF.value
     let cost = costTF.value
@@ -37,15 +35,16 @@ canvas.addEventListener('mousemove',mouseMove,true)
     const x = event.offsetX
     const y = event.offsetY
     //draw something here ...
-    ctx.fillcircle(x,y,10,180)
+    ctx.fillRect(x,y,8,8)
   }
+
 
   function mouseMove(event){
     const x = event.offsetX
     const y = event.offsetY
     // put your own code in here!
     if (event.buttons==1){ // only draw if they are pushing the button!
-        ctx.fillRect(x,y,10,20)
+        ctx.fillRect(x,y,2,5)
     }
 }
 
@@ -75,22 +74,22 @@ canvas.addEventListener('mousemove',mouseMove,true)
     let color = colorTF.value
     ctx.fillStyle=color
     ctx.beginPath();
-    ctx.arc(x,y,r,0,2*Math.PI,true)
+    ctx.arc(x,y,r,0,2*Math.PI,false)
     ctx.fill()
   }
   function drawEveline(){
-    ctx.fillStyle="blue"
+    ctx.fillStyle="purple"
     ctx.lineWidth=5
     ctx.beginPath()
-    ctx.moveTo(280,200)
-    ctx.lineTo(350,100)
-    ctx.lineTo(400,300)
-    ctx.lineTo(380,300)
-    ctx.lineTo(350,300)
-    ctx.lineTo(300,350)
-    ctx.lineTo(240,200)
-    ctx.lineTo(280,200)
-    ctx.lineTo(280,200)
+    ctx.moveTo(150,120)
+    ctx.lineTo(250,220)
+    ctx.lineTo(350,320)
+    ctx.lineTo(450,480)
+    ctx.lineTo(550,520)
+    ctx.lineTo(150,120)
+    ctx.lineTo(250,200)
+    ctx.lineTo(350,320)
+    ctx.lineTo(450,420)
     ctx.fill()
   }
 
@@ -100,7 +99,7 @@ canvas.addEventListener('mousemove',mouseMove,true)
    <div class="container">
      <div class="jumbotron">
        <h1>Eveline's Final Project .... </h1>
-       <p>This is a minimal demo </p>
+       <p>This is meu demo </p>
      </div>
 
    <div class="row">
@@ -127,12 +126,15 @@ canvas.addEventListener('mousemove',mouseMove,true)
 
      </div>
      <div class="col">
-       <h1>Buttons etc to draw on Canvas</h1>
-       <button style="background:red; color:white"
+       <h1>Buttons to draw on Canvas</h1>
+       <button style="background:red; color: blue"
                onclick="drawBackground()">Clear</button>
 
-       <br> <button onclick="drawEveline()">Draw Eve</button>
+      <br> <button style="background:red; color:blue">
+        <button onclick="drawEveline(100,180)">Draw Eve</button>
+
        ....
+
      </div>
 
 
