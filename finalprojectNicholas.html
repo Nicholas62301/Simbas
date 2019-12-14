@@ -13,7 +13,7 @@
   function CalcArea(){
     b = height.value  // read base from element with id="base"
     h = height.value  // read height from element with id="height"
-      = (b*h)*(1/2)
+      = ((b*h)*(1/2))
      console.log(area)
     Area.innerHTML =    // write into label element with id "Area"
         "Your Area is "
@@ -76,7 +76,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     ctx.fill()
   }
 
-  function drawRussianOrthodox(x,y){
+  function drawNick(x,y){
     ctx.strokeStyle="black"
     ctx.lineWidth=2
     ctx.lineTo(130,30)
@@ -150,7 +150,8 @@ canvas.addEventListener('mousemove',mouseMove,false)
        <h1>Buttons etc to draw on Canvas</h1>
        <button style="background:red; color:white"
                onclick="drawBackground()">Clear</button>
-     <br> <button onclick="drawRussianOrthodox"> Praise the LorT </button>
+     <br> <button onclick="drawNick(x,y)" >Praise the LorT</button>
+     <button onclick="DrawSmash()">DrawSmash</button>
 
      </div>
      <div>
@@ -163,7 +164,7 @@ canvas.addEventListener('mousemove',mouseMove,false)
     </div>
     <div>
       <ul>
-      I know how to solve a Rubik's Cube in 38 seconds
+      I know how to solve a Rubik's Cube in 27 seconds
       </ul>
       <ul>
     I never broke a bone in my body
